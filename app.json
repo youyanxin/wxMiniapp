@@ -1,12 +1,34 @@
 {
   "pages":[
-    "pages/index/index"
+    "pages/haircut/index",
+    "pages/order/index",
+    "pages/my/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarTitleText": "剪发",
     "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#2c2c2c",
+    "list": [{
+      "pagePath": "pages/haircut/index",
+      "text": "剪发",
+      "iconPath": "images/cut.png",
+      "selectedIconPath": "images/cut_on.png"
+    },{
+      "pagePath": "pages/order/index",
+      "text": "订单",
+      "iconPath": "images/order.png",
+      "selectedIconPath": "images/order_on.png"
+    },{
+      "pagePath": "pages/my/index",
+      "text": "我的",
+      "iconPath": "images/my.png",
+      "selectedIconPath": "images/my_on.png"
+    }]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

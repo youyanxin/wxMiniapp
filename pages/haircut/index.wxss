@@ -1,0 +1,21 @@
+/* pages/haircut/index.wxss */
+.wrap{
+  width: 100%;
+  height: 100%;
+}
+.wrap .swiper{
+  width: 100%;
+  height: 400rpx;
+}
+.wrap .swiper swiper{
+  width: 100%;
+  height: 100%;
+}
+.swiper .swiper-item{
+  width: 100%;
+  height: 100%;
+}
+.swiper-item image{
+  width: 100%;
+  height: 100%;
+}
