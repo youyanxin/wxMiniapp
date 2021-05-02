@@ -1,0 +1,88 @@
+<!--pages/store/index.wxml-->
+<view class="wrap">
+  <view class="top">
+    <image class="bg" src="https://img.pic88.com/st_preview/400954332.jpg?imageMogr2/quality/100!/thumbnail/640|watermark/3/image/aHR0cHM6Ly9qcy5waWM4OC5jb20vd3d3L2NvbW1vbi9pbWcvcGljODgtd2F0ZXIucG5n/gravity/Center/dissolve/100/dx/0/dy/10/image/aHR0cHM6Ly9qcy5waWM4OC5jb20vd3d3L2NvbW1vbi9pbWcvd2gyMzBiZy5wbmc=/dx/0/dy/25/text/SUTvvJoxMjAyMTAzMTAxMTM3MzIxMjAwNTY=/fill/I0ZGRkZGRg==/fontsize/320/dx/30/dy/30"></image>
+    <view class="pos-abs">
+      <view class="time">营业时间  11:00～23:00</view>
+      <view class="addr">
+        <image class="point" src="../../images/icon-point.png"></image>
+        <text>福建省厦门市湖里区金山街道提香二期3栋160号</text>
+      </view>
+      <view class="actv">
+        <view class="lt">
+          <text class="txt">奖</text>
+          <text>邀请好友奖励10元</text>
+        </view>
+        <view class="rt">
+          <text>1个活动</text>
+          <image class="icon-down" src="../../images/icon-point.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 手艺人/服务评价tab -->
+  <view class="tab-bar">
+    <view class="tab on">手艺人</view>
+    <view class="tab">服务评价</view>
+  </view>
+  <!-- 手艺人 -->
+  <view class="crafts">
+    <block wx:for="{{5}}" wx:key="index">
+      <view class="item">
+        <view class="temp">
+          <image class="img" src="../../images/icon-temp.png"></image>
+          <text>当前体温正常36.4℃</text>
+        </view>
+        <view class="qh" bindtap="goQuhao">取号</view>
+        <view class="lt">
+          <view class="box">
+            <!-- <image class="head"></image> -->
+          </view>
+          <view class="txt">手艺值 91.6</view>
+        </view>
+        <view class="rt">
+          <view class="name">鹏举Pengju</view>
+          <view class="que-pri">
+            <view class="price">￥<text class="int">48</text>.0</view>
+            <image class="icon-ques" src="../../images/icon-ques.png"></image>
+            <image class="img" src="../../images/cut.png"></image>
+          </view>
+          <view class="sche">
+            <image class="point" src="../../images/icon-point.png"></image>
+            <image class="point" src="../../images/icon-point.png"></image>
+            <view class="tips">前面有1人，约等待25分钟<text class="spn">进度》</text></view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <!-- 服务评价 -->
+  <view class="serv-rate">
+    <view class="title">服务评价</view>
+    <view class="nums">
+      <view class="half">
+        <view class="num">4.98</view>
+        <view class="txt">评分</view>
+      </view>
+      <view class="half">
+        <view class="num">16172</view>
+        <view class="txt">评论数</view>
+      </view>
+    </view>
+    <block wx:for="{{5}}">
+      <view class="block">
+        <image class="lt" src="../../images/controls.png"></image>
+        <view class="mid">
+          <view class="name">huang涪陵<text class="mobile">(150****4543)</text></view>
+          <image class="img" src="../../images/cut.png"></image>
+          <view class="btm">
+            <view class="txt">发型师：谭亮Tanliang</view>
+            <view class="time">2021-04-24</view>
+          </view>
+        </view>
+        <image class="emojy" src="../../images/controls.png"></image>
+      </view>
+    </block>
+    <view class="more-btn" bindtap="goServRate">查看全部评价</view>
+  </view>
+</view>

@@ -1,0 +1,199 @@
+/* pages/takeNumber/index.wxss */
+.wrap{
+  width: 100%;
+  height: 100vh;
+  background-color: #f2f2f2;
+  padding: 20rpx 20rpx 120rpx;
+  box-sizing: border-box;
+}
+.wrap .top{
+  display: flex;
+  margin-bottom: 20rpx;
+  padding: 40rpx 40rpx 40rpx 20rpx;
+  box-sizing: border-box;
+  border-radius: 8rpx;
+  background-color: #fff;
+}
+.top .img-box{
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 8rpx;
+  background-color: #f2f2f2;
+  overflow: hidden;
+}
+.img-box .img{
+  width: 100%;
+  height: 100%;
+}
+.top .txt-box{
+  flex: 1;
+  margin-left: 15rpx;
+}
+.txt-box .name{
+  font-size: 44rpx;
+  color: #111;
+  font-weight: bold;
+}
+.txt-box .name .zp{
+  font-size: 20rpx;
+  color: rgb(238, 143, 0);
+  background-color: rgba(255, 190, 92,.3);
+  margin-left: 20rpx;
+  font-weight: lighter;
+  padding: 5rpx 10rpx;
+  box-sizing: border-box;
+}
+.txt-box .sec-name{
+  font-size: 26rpx;
+  color: #666;
+}
+.txt-box .time{
+  font-size: 24rpx;
+  color: rgb(243, 35, 80);
+  margin-top: 20rpx;
+}
+.addr-box{
+  padding: 20rpx 90rpx 20rpx 40rpx;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+  background-color: #fff;
+}
+.addr-box .addr{
+  font-size: 26rpx;
+  color: #333;
+  margin-bottom: 10rpx;
+}
+.addr-box .dis{
+  font-size: 26rpx;
+  color: #999;
+}
+.addr-box .dis .img{
+  width: 30rpx;
+  height: 20rpx;
+  margin-left: 10rpx;
+  vertical-align: middle;
+}
+.fw-box{
+  width: 100%;
+  border-radius: 8rpx;
+  background-color: #fff;
+}
+.fw-box .title{
+  font-size: 34rpx;
+  color: #333;
+  font-weight: bold;
+  border-bottom:1px solid #f2f2f2;
+  padding: 40rpx 40rpx;
+  box-sizing: border-box;
+}
+.fw-box .fw-list{
+  padding: 0 40rpx;
+  box-sizing: border-box;
+}
+.fw-list .item{
+  padding: 40rpx 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+.fw-list .item:not(:last-child){
+  border-bottom:1px solid #f2f2f2;
+}
+.fw-list .item .lt{
+  flex: 1;
+}
+.item .lt .tp{
+  display: flex;
+  align-items: center;
+}
+.lt .tp .name{
+  font-size: 32rpx;
+  color: #999;
+  margin-bottom: 10rpx;
+}
+.lt .tp .tag{
+  margin-left: 10rpx;
+  font-size: 20rpx;
+  color: #fff;
+  background-color: rgb(255, 145, 0);
+  padding: 0 10rpx;
+  box-sizing: border-box;
+  border-radius: 4rpx;
+}
+.lt .bm{
+  font-size: 26rpx;
+  color: #999;
+}
+.fw-list .item .rt{
+  margin-left: 100rpx;
+  display: flex;
+  align-items: center;
+}
+.item .rt .price{
+  font-size: 28rpx;
+  color: #999;
+}
+.item .rt .circle{
+  border-radius: 50%;
+  border: 1px solid #333;
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 50rpx;
+}
+.fw-list .item.on .name{
+  color: #111;
+}
+.fw-list .item.on .price{
+  color: #111;
+}
+.fw-list .item.on .rt .circle{
+  width: 15rpx;
+  height: 15rpx;
+  border: 15rpx solid rgb(243, 35, 80);
+}
+.fixed-btm{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  padding: 10rpx 20rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.fixed-btm .lt{
+  display: flex;
+  align-items: center;
+}
+.fixed-btm .lt .price{
+  font-size: 50rpx;
+  color: rgb(243, 35, 80);
+}
+.fixed-btm .lt .price .spn{
+  font-size: 20rpx;
+}
+.fixed-btm .lt .tag{
+  font-size: 20rpx;
+  border: 1px solid rgb(243, 35, 80);
+  border-radius: 0 50rpx 50rpx 50rpx;
+  width: 100rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  color: rgb(243, 35, 80);
+  text-align: center;
+  margin-left: 15rpx;
+}
+.fixed-btm .btn{
+  width: 300rpx;
+  text-align:center;
+  line-height: 80rpx;
+  background-color: rgb(170, 170, 170);
+  border-radius: 50rpx;
+  font-size: 28rpx;
+  color: #fff;
+}
+.fixed-btm .btn.on{
+  background-color: rgb(243, 35, 80);
+}

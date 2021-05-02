@@ -1,2 +1,52 @@
 <!--pages/order/index.wxml-->
-<text>pages/order/index.wxml</text>
+<view class="wrap">
+  <view class="tab-bar">
+    <block wx:for="{{tabList}}" wx:key="index">
+      <view class="tab {{curTab==item.value?'on':''}}" data-value="{{item.value}}" bindtap="changeTab">{{item.name}}</view>
+    </block>
+  </view>
+  <view class="list">
+    <!-- 已取消/过号 -->
+    <view class="qx-item" wx:if="{{curTab==3}}">
+      <view class="status">
+        <image src="../../images/controls.png"></image>
+        <text>已取消</text>
+      </view>
+      <view class="syr-addr">
+        <view class="addr-lt">
+          <text>大冲新城花园工作室</text>
+          <image class="icon-right" src="../../images/icon-right.png"></image>
+        </view>
+        <view class="addr-rt">
+          <image class="icon-point" src="../../images/icon-point.png"></image>
+          <view>474.0km</view>
+        </view>
+      </view>
+      <view class="block-list">
+        <view class="qx-block">
+          <text class="lt">排队号码</text>
+          <text class="rt">A003</text>
+        </view>
+        <view class="qx-block">
+          <text class="lt">发型师</text>
+          <text class="rt on">火箭Huojian</text>
+        </view>
+        <view class="qx-block">
+          <text class="lt">服务项目</text>
+          <text class="rt">洗剪吹</text>
+        </view>
+        <view class="qx-block">
+          <text class="lt">合计</text>
+          <text class="rt">¥48</text>
+        </view>
+        <view class="qx-block">
+          <text class="lt">取号时间</text>
+          <text class="rt">2021-04-17 10:57:31</text>
+        </view>
+      </view>
+      <view class="syr-qh">
+        <view class="btn on">重新取号</view>
+      </view>
+    </view>
+  </view>
+</view>

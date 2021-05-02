@@ -1,0 +1,9 @@
+/* pages/mapSearch/index.wxss */
+.wrap{
+  width: 100%;
+  height: 100%;
+}
+.wrap .map{
+  width: 100%;
+  height: 100vh;
+}

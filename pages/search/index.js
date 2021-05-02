@@ -1,35 +1,53 @@
-// pages/order/index.js
+// pages/search/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    curTab:3,
-    tabList:[{
-      name:'待服务',
-      value:0
-    },{
-      name:'待支付',
-      value:1
-    },{
-      name:'已完成',
-      value:2
-    },{
-      name:'已取消/过号',
-      value:3
-    }]
+    searchVal:'',
+    curTab:1
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.showLoading({
-      title: '正在加载中···',
-      mask:true
+    this.setData({
+      searchVal:options.searchVal
     })
-    setTimeout(function(){wx.hideLoading()},3000)
+  },
+
+  /**
+   * 获取搜索框的值
+   */
+  getSearchVal(e){
+    this.setData({
+      searchVal:e.detail.value
+    })
+  },
+  /**
+   * 清除搜索框的值
+   */
+  clear(){
+    this.setData({
+      searchVal:''
+    })
+  },
+  /**
+   * 搜索
+   */
+  search(){
+    // 调用接口
+  },
+
+  /**
+   * 关闭
+   */
+  goHaircut(){
+    wx.navigateBack({
+      delta: 1
+    })
   },
 
   /**
@@ -37,9 +55,8 @@ Page({
    */
   changeTab(e){
     this.setData({
-      curTab:e.currentTarget.dataset.value
+      curTab:e.currentTarget.dataset.index
     })
-    // 调用接口
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

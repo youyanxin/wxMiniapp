@@ -19,3 +19,185 @@
   width: 100%;
   height: 100%;
 }
+.search-block{
+  width: 100%;
+  position: relative;
+  top: -20rpx;
+  padding: 0 20rpx 20rpx;
+  box-sizing: border-box;
+}
+.search-block:after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #f6f6f6;
+}
+.search-block .search-box{
+  background-color: #fff;
+  padding: 20rpx 30rpx;
+  box-sizing: border-box;
+  border-radius: 12rpx;
+  border:1px solid #f6f6f6;
+}
+.search-block .search-bar{
+  display: flex;
+  align-items: center;
+}
+.search-block .search-area-box{
+  display: flex;
+  align-items: center;
+  border-radius: 100rpx;
+  border: 1px solid #f6f6f6;
+  padding: 10rpx 0;
+  box-sizing: border-box;
+  flex: 1;
+}
+.search-bar .area-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #f6f6f6;
+  margin-right: 30rpx;
+  min-width: 120rpx;
+}
+.area-box .area-text{
+  font-size: 26rpx;
+  color: #333;
+  margin-right: 10rpx;
+}
+.area-box .icon-down{
+  width: 20rpx;
+  height: 20rpx;
+}
+.search-bar .input-box{
+  display: flex;
+  align-items: center;
+  padding-right: 10rpx;
+  flex: 1;
+}
+.input-box input{
+  font-size: 26rpx;
+  color: #333;
+  flex: 1;
+}
+.input-box .icon-search{
+  width: 20rpx;
+  height: 20rpx;
+  margin-right: 20rpx;
+}
+.search-bar .search-btn{
+  font-size:26rpx;
+  border-left:1px solid #f6f6f6;
+  width: 80rpx;
+  text-align: center;
+}
+.input-box .icon-close{
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 10rpx;
+}
+.search-bar .map-search{
+  text-align: center;
+  margin-left: 20rpx;
+}
+.map-search .map-txt{
+  font-size: 20rpx;
+  color: #333;
+}
+.map-search .icon-map{
+  width: 30rpx;
+  height: 30rpx;
+}
+/* 门店 */
+.md-area .md-item{
+  padding: 50rpx 30rpx;
+  box-sizing: border-box;
+  border-bottom:1px solid #f6f6f6;
+  display: flex;
+}
+.md-item .md-lt{
+  flex: 1;
+  margin-right: 80rpx;
+}
+.md-lt .md-name{
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #111;
+  margin-bottom: 10rpx;
+}
+.md-name .img{
+  width: 100rpx;
+  height: 30rpx;
+}
+.md-lt .md-func{
+  font-size: 28rpx;
+  color: #333;
+}
+.md-func .img{
+  width: 100rpx;
+  height: 30rpx;
+}
+.md-lt .md-num{
+  border: 1px solid #333;
+  border-radius: 4rpx;
+  font-size: 20rpx;
+  color: #666;
+  display: inline-block;
+  padding:  2rpx 10rpx;
+  box-sizing: border-box;
+  margin-bottom: 10rpx;
+}
+.md-lt .md-disc{
+  display: flex;
+  align-items: center;
+  font-size: 20rpx;
+  color:#666;
+  margin-bottom: 10rpx;
+}
+.md-disc .txt{
+  padding: 0 2rpx;
+  box-sizing: border-box;
+  margin-right: 10rpx;
+  text-align: center;
+  color: #fff;
+  display: inline-block;
+  background-color: rgb(236, 29, 133);
+}
+.md-lt .md-addr{
+  display: flex;
+  font-size: 22rpx;
+  color: #333;
+}
+.md-addr .img{
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}
+.md-addr .txt{
+  flex: 1;
+}
+.md-item .md-rt{
+  text-align: right;
+  position: relative;
+}
+.md-rt .md-dis{
+  font-size: 36rpx;
+  color: #333;
+  margin-bottom: 10rpx;
+}
+.md-rt .md-tips{
+  font-size: 22rpx;
+  color: rgb(243, 35, 80);
+}
+.md-rt .md-btn{
+  color: #fff;
+  font-size: 28rpx;
+  padding: 15rpx 25rpx;
+  box-sizing: border-box;
+  background-color: rgb(243, 35, 80);
+  border-radius: 10rpx;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

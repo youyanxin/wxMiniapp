@@ -1,0 +1,74 @@
+<!--pages/evaluate/index.wxml-->
+<view class="wrap">
+  <view class="fixed-top">
+    <view class="tab-nor">
+      <block wx:for="{{typeList}}">
+        <view class="tab {{norTabIdx==item.value?'on':''}}" data-idx="{{item.value}}" bindtap="changeNorTabIndex">{{item.name}}({{item.num}})</view>
+      </block>
+    </view>
+    <scroll-view scroll-x="true">
+      <view class="tab-hor">
+        <block wx:for="{{verList}}">
+          <view class="tab {{norTabIdx==item.value?'on':''}}" data-idx="{{item.value}}" bindtap="changeNorTabIndex">{{item.name}}({{item.num}})</view>
+        </block>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 最新好评 -->
+  <view class="new-area">
+    <view class="area-title">最新好评</view>
+    <block wx:for="{{1}}">
+      <view class="block">
+        <image class="lt" src="../../images/controls.png"></image>
+        <view class="mid">
+          <view class="name">huang涪陵<text class="mobile">(150****4543)</text></view>
+          <image class="img" src="../../images/cut.png"></image>
+          <view class="tag-list">
+            <view class="tag" wx:for="{{6}}">发型效果好</view>
+          </view>
+          <view class="btm">
+            <view class="txt">发型师：谭亮Tanliang</view>
+            <view class="time">2021-04-24</view>
+          </view>
+        </view>
+        <image class="emojy" src="../../images/controls.png"></image>
+      </view>
+    </block>
+  </view>
+  <!-- 最佳好评 -->
+  <view class="best-area">
+    <view class="area-title">最佳好评</view>
+    <block wx:for="{{5}}">
+      <view class="block">
+        <image class="lt" src="../../images/controls.png"></image>
+        <view class="mid">
+          <view class="name">huang涪陵<text class="mobile">(150****4543)</text></view>
+          <view class="tag-list">
+            <view class="tag" wx:for="{{6}}">发型效果好</view>
+          </view>
+          <view class="txt-box">
+            <view class="txt {{1==1?'autoH':''}}">的克贵金属的科技感的框架都是空给付对价反馈斯蒂芬看到肯定是费劲儿我是看得出DVD咖啡机康复科的减肥肯定是放得开分接口的美等方面的开发开发大口径付款反馈的健身卡富家大室分看电视剧付款的反馈接口的实付金额偶发的框架番窠倒臼分打飞机单身快乐发快递就发呆时空裂缝就可是</view>
+            <view class="zkss" bindtap="zk">
+              <text>展开</text>
+              <image class="img" src="../../images/icon-right.png"></image>
+            </view>
+            <view class="zkss" bindtap="ss">
+              <text>收起</text>
+              <image class="img" src="../../images/icon-right.png"></image>
+            </view>
+          </view>
+          <view class="img-list">
+            <block wx:for="{{4}}">
+              <image class="img" src="https://img.pic88.com/st_preview/400954332.jpg?imageMogr2/quality/100!/thumbnail/640|watermark/3/image/aHR0cHM6Ly9qcy5waWM4OC5jb20vd3d3L2NvbW1vbi9pbWcvcGljODgtd2F0ZXIucG5n/gravity/Center/dissolve/100/dx/0/dy/10/image/aHR0cHM6Ly9qcy5waWM4OC5jb20vd3d3L2NvbW1vbi9pbWcvd2gyMzBiZy5wbmc=/dx/0/dy/25/text/SUTvvJoxMjAyMTAzMTAxMTM3MzIxMjAwNTY=/fill/I0ZGRkZGRg==/fontsize/320/dx/30/dy/30" mode="aspectFill" bindtap="previewImage"  data-list="{{pictures}}" data-src="{{item}}" lazy-load></image>
+            </block>
+          </view>
+          <view class="btm">
+            <view class="txt">发型师：谭亮Tanliang</view>
+            <view class="time">2021-04-24</view>
+          </view>
+        </view>
+        <image class="emojy" src="../../images/controls.png"></image>
+      </view>
+    </block>
+  </view>
+</view>

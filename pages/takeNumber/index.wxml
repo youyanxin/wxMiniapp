@@ -1,0 +1,61 @@
+<!--pages/takeNumber/index.wxml-->
+<view class="wrap">
+  <view class="top">
+    <view class="img-box">
+      <image class="img" src="https://img.pic88.com/st_preview/400954332.jpg?imageMogr2/quality/100!/thumbnail/640|watermark/3/image/aHR0cHM6Ly9qcy5waWM4OC5jb20vd3d3L2NvbW1vbi9pbWcvcGljODgtd2F0ZXIucG5n/gravity/Center/dissolve/100/dx/0/dy/10/image/aHR0cHM6Ly9qcy5waWM4OC5jb20vd3d3L2NvbW1vbi9pbWcvd2gyMzBiZy5wbmc=/dx/0/dy/25/text/SUTvvJoxMjAyMTAzMTAxMTM3MzIxMjAwNTY=/fill/I0ZGRkZGRg==/fontsize/320/dx/30/dy/30"></image>
+    </view>
+    <view class="txt-box">
+      <view class="name">
+        <text>东城Dongcheng</text>
+        <text class="zp">作品6个</text>
+      </view>
+      <view class="sec-name">中骏四季阳光工作室</view>
+      <view class="time">4月26日上午11:00上班</view>
+    </view>
+  </view>
+  <view class="addr-box">
+    <view class="addr">深圳市髋关节的科技感坑的结构诶我接口对接看国家饭的了艰苦奋斗监管科</view>
+    <view class="dis">
+      <text class="txt">距您439.4km</text>
+      <image class="img" src="../../images/icon-right.png"></image>
+    </view>
+  </view>
+  <view class="fw-box">
+    <view class="title">服务项目</view>
+    <view class="fw-list">
+      <view class="item on">
+        <view class="lt">
+          <view class="tp">
+            <text class="name">洗剪吹</text>
+            <text class="tag">HOT</text>
+          </view>
+          <view class="bm">右键快点改接口的设计稿贷款公司的、绝对是靠。</view>
+        </view>
+        <view class="rt">
+          <text class="price">￥48</text>
+          <view class="circle"></view>
+        </view>
+      </view>
+      <view class="item">
+        <view class="lt">
+          <view class="tp">
+            <text class="name">小孩剪发</text>
+          </view>
+          <view class="bm">右键快点改接口的设计稿贷款公司的、绝对是靠。</view>
+        </view>
+        <view class="rt">
+          <text class="price">￥38</text>
+          <view class="circle"></view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="fixed-btm">
+    <view class="lt">
+      <view class="price">￥45<text class="spn">.0</text></view>
+      <view class="tag">新人专享</view>
+    </view>
+    <view class="btn on">取号</view>
+    <!-- <view class="btn">休息中</view> -->
+  </view>
+</view>

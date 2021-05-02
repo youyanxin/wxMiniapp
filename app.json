@@ -1,34 +1,61 @@
 {
-  "pages":[
+  "pages": [
     "pages/haircut/index",
+    "pages/takeNumber/index",
+    "pages/store/index",
+    "pages/evaluate/index",
     "pages/order/index",
-    "pages/my/index"
+    "pages/my/index",
+    "pages/search/index",
+    "pages/mapSearch/index",
+    "pages/coupon/index",
+    "pages/favorites/index",
+    "pages/haircutCalendar/index",
+    "pages/personalFile/index",
+    "pages/hisHairstyles/index",
+    "pages/inviteFriends/index",
+    "pages/feedback/index",
+    "pages/subscNews/index",
+    "pages/USC/index",
+    "pages/noticeManage/index",
+    "pages/hairstyleCircle/index",
+    "pages/news/index",
+    "pages/UVIP/index"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "剪发",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#bfbfbf",
     "selectedColor": "#2c2c2c",
-    "list": [{
-      "pagePath": "pages/haircut/index",
-      "text": "剪发",
-      "iconPath": "images/cut.png",
-      "selectedIconPath": "images/cut_on.png"
-    },{
-      "pagePath": "pages/order/index",
-      "text": "订单",
-      "iconPath": "images/order.png",
-      "selectedIconPath": "images/order_on.png"
-    },{
-      "pagePath": "pages/my/index",
-      "text": "我的",
-      "iconPath": "images/my.png",
-      "selectedIconPath": "images/my_on.png"
-    }]
+    "list": [
+      {
+        "pagePath": "pages/haircut/index",
+        "text": "剪发",
+        "iconPath": "images/cut.png",
+        "selectedIconPath": "images/cut_on.png"
+      },
+      {
+        "pagePath": "pages/order/index",
+        "text": "订单",
+        "iconPath": "images/order.png",
+        "selectedIconPath": "images/order_on.png"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "text": "我的",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my_on.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

@@ -1,2 +1,30 @@
 <!--pages/my/index.wxml-->
-<text>pages/my/index.wxml</text>
+<view class="wrap">
+  <view class="head">
+    <view class="lt">
+      <image wx:if="{{false}}" class="img" src="../../images/controls.png"></image>
+      <view class="txt">
+        <view>点击</view>
+        <view>获取头像</view>
+      </view>
+    </view>
+    <view class="rt">
+      <view class="name">--</view>
+      <view class="phone">
+        <text>157****0206</text>
+        <text class="spn">更换</text>
+      </view>
+    </view>
+  </view>
+  <view class="banner">
+    <image class="img" src="https://img.pic88.com/st_preview/400954332.jpg?imageMogr2/quality/100!/thumbnail/640|watermark/3/image/aHR0cHM6Ly9qcy5waWM4OC5jb20vd3d3L2NvbW1vbi9pbWcvcGljODgtd2F0ZXIucG5n/gravity/Center/dissolve/100/dx/0/dy/10/image/aHR0cHM6Ly9qcy5waWM4OC5jb20vd3d3L2NvbW1vbi9pbWcvd2gyMzBiZy5wbmc=/dx/0/dy/25/text/SUTvvJoxMjAyMTAzMTAxMTM3MzIxMjAwNTY=/fill/I0ZGRkZGRg==/fontsize/320/dx/30/dy/30" bindtap="goUVIP"></image>
+  </view>
+  <view class="my-list">
+    <block wx:for="{{funcList}}" wx:key="index">
+      <view class="my-item" data-item="{{item}}" bindtap="goPage">
+        <image class="img" src="{{item.icon}}"></image>
+        <view class="txt">{{item.name}}</view>
+      </view>
+    </block>
+  </view>
+</view>

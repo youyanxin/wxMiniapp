@@ -1,1 +1,124 @@
 /* pages/order/index.wxss */
+.wrap{
+  width: 100%;
+  height: 100vh;
+  padding-top: 70rpx;
+  background-color: #f2f2f2;
+}
+.wrap .tab-bar{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: #fff;
+}
+.tab-bar .tab{
+  flex: 1;
+  text-align: center;
+  font-size:30rpx;
+  color: #333;
+  line-height: 70rpx;
+  border-bottom: 2px solid transparent;
+}
+.tab-bar .tab.on{
+  border-color: rgb(243, 35, 80);
+}
+/* 订单列表 */
+.list{
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+.qx-item{
+  background-color: #fff;
+  border-radius: 10rpx;
+  width: 100%;
+  overflow: hidden;
+}
+.qx-item .status{
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  font-size:30rpx;
+  padding: 10rpx 30rpx;
+  box-sizing: border-box;
+}
+.qx-item .status image{
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+.syr-addr{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 110rpx;
+  padding: 10rpx 30rpx;
+  box-sizing: border-box;
+}
+.syr-addr .addr-lt{
+  font-size: 28rpx;
+  color: #111;
+}
+.syr-addr .icon-right{
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+  margin-left: 10rpx;
+}
+.syr-addr .addr-rt{
+  font-size:20rpx;
+  color: #333;
+  text-align: center;
+}
+.addr-rt .icon-point{
+  width: 30rpx;
+  height: 30rpx;
+}
+.block-list{
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+.block-list .qx-block{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5rpx 0;
+  box-sizing: border-box;
+}
+.block-list .qx-block:first-child{
+  border-top: 1px solid #f2f2f2;
+  padding: 20rpx 0 5px;
+}
+.block-list .qx-block:last-child{
+  border-bottom: 1px solid #f2f2f2;
+  padding: 5px 0 20rpx;
+}
+.qx-block .lt{
+  font-size:26rpx;
+  color: #666;
+}
+.qx-block .rt{
+  font-size: 28rpx;
+  color: #111;
+}
+.syr-qh{
+  text-align: right;
+  padding: 30rpx;
+}
+.syr-qh .btn{
+  display: inline-block;
+  width: 30%;
+  text-align: center;
+  background-color: #ccc;
+  color: #fff;
+  font-size:30rpx;
+  border-radius: 8rpx;
+  line-height: 70rpx;
+}
+.syr-qh .btn.on{
+  background-color: rgb(243, 35, 80);
+}

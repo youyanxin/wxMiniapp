@@ -1,0 +1,97 @@
+<!--pages/search/index.wxml-->
+<view class="wrap">
+  <view class="fixed-top">
+    <view class="search-bar">
+      <view class="search-bar-con">
+        <input type="text" value="{{searchVal}}" confirm-type="search" placeholder="请输入发型师或门店名称" bindinput="getSearchVal" />
+        <image wx:if="{{searchVal}}" class="icon-close" src="../../images/icon-close.png" bindtap="clear"></image>
+        <view wx:if="{{searchVal}}" class="search-btn" bindtap="search">搜索</view>
+        <view wx:if="{{!searchVal}}" class="search-btn" bindtap="goHaircut">关闭</view>
+      </view>
+    </view>
+    <view class="tab-bar">
+      <view class="tab-item {{curTab=='1'?'on':''}}" bindtap="changeTab" data-index="1">
+        <text class="txt">门店(492)</text>
+      </view>
+      <view class="tab-item {{curTab=='2'?'on':''}}" bindtap="changeTab" data-index="2">
+        <text class="txt">手艺人(2)</text>
+      </view>
+    </view>
+  </view>
+  <view class="scroll-con">
+    <view class="md-area" wx:if="{{curTab=='1'}}">
+      <block wx:for="{{5}}" wx:key="index">
+        <view class="md-item">
+          <view class="md-lt">
+            <view class="md-name">
+              <text>大东工作室</text>
+              <image class="img" src="../../images/cut.png"></image>
+            </view>
+            <view class="md-func">
+              <text class="txt">洗剪吹</text>
+              <image class="img" src="../../images/cut.png"></image>
+            </view>
+            <view class="md-num">1人正在剪发</view>
+            <view class="md-disc">
+              <text class="txt">奖</text>
+              <text class="desc">要请好友奖励10元</text>
+            </view>
+            <view class="md-addr">
+              <image class="img" src="../../images/cut.png"></image>
+              <text class="txt">深圳市坪山快点改接口的六合商业广场一期捷普11号（金六福珠宝胖）</text>
+            </view>
+          </view>
+          <view class="md-rt">
+            <view class="md-dis">430.2km</view>
+            <view class="md-tips">离你最近</view>
+            <view class="md-btn">去剪发</view>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class="syr-area" wx:if="{{curTab=='2'}}">
+      <view class="syr-list">
+        <block wx:for="{{5}}" wx:index="index">
+          <view class="syr-item">
+            <view class="syr-temp">
+              <image class="temp" src="../../images/icon-temp.png"></image>
+              <text>当前体温正常36.4℃</text>
+            </view>
+            <view class="syr-top">
+              <view class="top-lt">
+                <image class="head" src="../../images/controls.png"></image>
+                <view class="ltr">
+                  <view class="name">阿特Ate</view>
+                  <view class="tips">前面有1人，约等待25分钟<text class="spn">进度》</text></view>
+                </view>
+              </view>
+              <view class="top-rt">
+                <view class="rt-tol">
+                  <image class="icon-ques" src="../../images/icon-ques.png"></image>
+                  <view class="price">￥<text class="int">48</text>.0</view>
+                  <image class="img" src="../../images/icon-map.png"></image>
+                </view>
+                <view class="btn">4年经验</view>
+              </view>
+            </view>
+            <view class="syr-btm">
+              <view class="syr-addr">
+                <view class="addr-lt">
+                  <text>大冲新城花园工作室</text>
+                  <image class="icon-right" src="../../images/icon-right.png"></image>
+                </view>
+                <view class="addr-rt">
+                  <image class="icon-point" src="../../images/icon-point.png"></image>
+                  <view>474.0km</view>
+                </view>
+              </view>
+            </view>
+            <view class="syr-qh">
+              <view class="btn on">取号</view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>

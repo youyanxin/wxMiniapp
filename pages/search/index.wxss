@@ -1,0 +1,316 @@
+/* pages/search/index.wxss */
+.wrap{
+  width: 100%;
+  height: 100vh;
+}
+.fixed-top{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+.search-bar{
+  width: 100%;
+  padding: 20rpx 30rpx;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+}
+.search-bar .search-bar-con{
+  width: 100%;
+  border-radius: 10rpx;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 10rpx 30rpx;
+  box-sizing: border-box;
+}
+.search-bar-con input{
+  flex: 1;
+  font-size: 28rpx;
+  color: #333;
+  height: 70rpx;
+}
+.search-bar-con .icon-close{
+  width: 35rpx;
+  height: 35rpx;
+  margin:  0 10rpx;
+}
+.search-bar-con .search-btn{
+  font-size: 28rpx;
+  color: #333;
+  padding-left: 20rpx;
+  border-left: 1px solid #f2f2f2;
+}
+
+/* tab栏 */
+.tab-bar{
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f6f6f6;
+  background-color: #fff;
+}
+.tab-bar .tab-item{
+  flex: 1;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.tab-item .txt{
+  font-size: 26rpx;
+  color: #666;
+  display: inline-block;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  border-bottom: 2px solid transparent;
+}
+.tab-bar .tab-item.on .txt{
+  color: rgb(243, 35, 80);
+  border-color: rgb(243, 35, 80);
+}
+
+/* 门店 */
+.scroll-con{
+  padding-top: 210rpx;
+  box-sizing: border-box;
+}
+.scroll-con .md-area{
+  width: 100%;
+}
+.md-area .md-item{
+  padding: 50rpx 30rpx;
+  box-sizing: border-box;
+  border-bottom:1px solid #f6f6f6;
+  display: flex;
+}
+.md-item .md-lt{
+  flex: 1;
+  margin-right: 80rpx;
+}
+.md-lt .md-name{
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #111;
+  margin-bottom: 10rpx;
+}
+.md-name .img{
+  width: 100rpx;
+  height: 30rpx;
+}
+.md-lt .md-func{
+  font-size: 28rpx;
+  color: #333;
+}
+.md-func .img{
+  width: 100rpx;
+  height: 30rpx;
+}
+.md-lt .md-num{
+  border: 1px solid #333;
+  border-radius: 4rpx;
+  font-size: 20rpx;
+  color: #666;
+  display: inline-block;
+  padding:  2rpx 10rpx;
+  box-sizing: border-box;
+  margin-bottom: 10rpx;
+}
+.md-lt .md-disc{
+  display: flex;
+  align-items: center;
+  font-size: 20rpx;
+  color:#666;
+  margin-bottom: 10rpx;
+}
+.md-disc .txt{
+  padding: 0 2rpx;
+  box-sizing: border-box;
+  margin-right: 10rpx;
+  text-align: center;
+  color: #fff;
+  display: inline-block;
+  background-color: rgb(236, 29, 133);
+}
+.md-lt .md-addr{
+  display: flex;
+  font-size: 22rpx;
+  color: #333;
+}
+.md-addr .img{
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}
+.md-addr .txt{
+  flex: 1;
+}
+.md-item .md-rt{
+  text-align: right;
+  position: relative;
+}
+.md-rt .md-dis{
+  font-size: 36rpx;
+  color: #333;
+  margin-bottom: 10rpx;
+}
+.md-rt .md-tips{
+  font-size: 22rpx;
+  color: rgb(243, 35, 80);
+}
+.md-rt .md-btn{
+  color: #fff;
+  font-size: 28rpx;
+  padding: 15rpx 25rpx;
+  box-sizing: border-box;
+  background-color: rgb(243, 35, 80);
+  border-radius: 10rpx;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+/* 手艺人 */
+.syr-area{
+  width: 100%;
+}
+.syr-area .syr-list{
+
+}
+.syr-list .syr-item{
+  width: 100%;
+  padding: 50rpx 30rpx;
+  box-sizing: border-box;
+  position: relative;
+}
+.syr-list .syr-item:first-child{
+  border-top: 20rpx solid #f2f2f2;
+}
+.syr-list .syr-item:not(:last-child){
+  border-bottom: 20rpx solid #f2f2f2;
+}
+.syr-item .syr-temp{
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 22rpx;
+  color: #049dbb;
+  background-color: rgba(0, 146, 134, 0.15);
+  display: flex;
+  align-items: center;
+  padding: 5rpx 15rpx;
+  box-sizing: border-box;
+  border-radius: 100rpx;
+}
+.syr-temp .temp{
+  width: 20rpx;
+  height: 20rpx;
+  margin-right: 6rpx;
+}
+.syr-item .syr-top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #f2f2f2;
+  padding-bottom: 10rpx;
+  box-sizing: border-box;
+}
+.syr-top .top-lt{
+  flex: 1;
+  display: flex;
+}
+.top-lt .head{
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 10rpx;
+}
+.top-lt .ltr{
+  flex: 1;
+}
+.ltr .name{
+  font-size: 36rpx;
+  color: #111;
+}
+.ltr .tips{
+  font-size: 26rpx;
+  color: #666;
+}
+.ltr .tips .spn{
+  color: #111;
+}
+.syr-top .top-rt{
+  text-align: right;
+  margin-left: 50rpx;
+}
+.top-rt .rt-tol{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10rpx;
+}
+.rt-tol .icon-ques{
+  width: 30rpx;
+  height: 30rpx;
+}
+.rt-tol .price{
+  font-size: 22rpx;
+  color: rgb(243, 35, 80);
+}
+.rt-tol .price .int{
+  font-size:36rpx;
+}
+.rt-tol .img{
+  width: 100rpx;
+  height: 30rpx;
+}
+.top-rt .btn{
+  color: #fff;
+  background-color: #000;
+  border-radius: 8rpx;
+  padding: 5rpx 15rpx;
+  box-sizing: border-box;
+  display: inline-block;
+  font-size:28rpx;
+}
+.syr-btm{
+  padding: 20rpx 0;
+  box-sizing: border-box;
+}
+.syr-btm .syr-addr{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.syr-addr .addr-lt{
+  font-size: 28rpx;
+  color: #111;
+}
+.syr-btm .icon-right{
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+}
+.syr-btm .addr-rt{
+  font-size:20rpx;
+  color: #333;
+  text-align: center;
+}
+.addr-rt .icon-point{
+  width: 30rpx;
+  height: 30rpx;
+}
+.syr-qh{
+  text-align: right;
+}
+.syr-qh .btn{
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+  background-color: #ccc;
+  color: #fff;
+  font-size:30rpx;
+  border-radius: 8rpx;
+  line-height: 70rpx;
+  letter-spacing: 10rpx;
+}
+.syr-qh .btn.on{
+  background-color: rgb(243, 35, 80);
+}
