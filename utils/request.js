@@ -25,7 +25,6 @@ function request(url, callEvent, data = {}, method = "GET", loading='', header =
           method: method,
           header: header,
           success: function (res) {
-            debugger
               if (res.data.success) {
                   if (!res.data.success) {
                     console.log(callEvent);

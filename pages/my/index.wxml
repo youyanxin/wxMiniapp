@@ -2,17 +2,17 @@
 <view class="wrap">
   <view class="head">
     <view class="lt">
-      <image wx:if="{{false}}" class="img" src="../../images/controls.png"></image>
-      <view class="txt">
-        <view>点击</view>
-        <view>获取头像</view>
+      <image wx:if="{{hasUserInfo}}" class="img" src="{{userInfo.avatarUrl}}"></image>
+      <view class="txt" wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile">
+        <view wx:if="{{!hasUserInfo}}">点击</view>
+        <view wx:if="{{!hasUserInfo}}">获取头像</view>
       </view>
     </view>
     <view class="rt">
-      <view class="name">--</view>
+      <view class="name">{{userInfo.nickName}}</view>
       <view class="phone">
         <text>157****0206</text>
-        <text class="spn">更换</text>
+        <button open-type="getPhoneNumber" class="spn" bindgetphonenumber="getPhoneNumber">更换</button>
       </view>
     </view>
   </view>
