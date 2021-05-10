@@ -1,4 +1,4 @@
-const current = "local";
+const current = "dev";
 
 let profiles = {
  

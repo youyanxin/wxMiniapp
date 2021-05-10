@@ -1,4 +1,6 @@
 // pages/haircut/index.js
+import { selectStoreList } from '../../api/haircut';
+
 Page({
 
   /**
@@ -8,7 +10,8 @@ Page({
     latitude:null,
     longitude:null,
     searchVal:'',
-    bannerList:['https://img.pic88.com/st_preview/400954332.jpg?imageMogr2/quality/100!/thumbnail/640|watermark/3/image/aHR0cHM6Ly9qcy5waWM4OC5jb20vd3d3L2NvbW1vbi9pbWcvcGljODgtd2F0ZXIucG5n/gravity/Center/dissolve/100/dx/0/dy/10/image/aHR0cHM6Ly9qcy5waWM4OC5jb20vd3d3L2NvbW1vbi9pbWcvd2gyMzBiZy5wbmc=/dx/0/dy/25/text/SUTvvJoxMjAyMTAzMTAxMTM3MzIxMjAwNTY=/fill/I0ZGRkZGRg==/fontsize/320/dx/30/dy/30','https://img.pic88.com/st_preview/400102742.jpg?imageMogr2/quality/100!/thumbnail/640|watermark/3/image/aHR0cHM6Ly9qcy5waWM4OC5jb20vd3d3L2NvbW1vbi9pbWcvcGljODgtd2F0ZXIucG5n/gravity/Center/dissolve/100/dx/0/dy/10/image/aHR0cHM6Ly9qcy5waWM4OC5jb20vd3d3L2NvbW1vbi9pbWcvd2gyMzBiZy5wbmc=/dx/0/dy/25/text/SUTvvJoxMjAyMTAzMTMwNzI3NTYxMDIxNjU=/fill/I0ZGRkZGRg==/fontsize/320/dx/30/dy/30','https://img.pic88.com/st_preview/400184421.jpg?imageMogr2/quality/100!/thumbnail/640|watermark/3/image/aHR0cHM6Ly9qcy5waWM4OC5jb20vd3d3L2NvbW1vbi9pbWcvcGljODgtd2F0ZXIucG5n/gravity/Center/dissolve/100/dx/0/dy/10/image/aHR0cHM6Ly9qcy5waWM4OC5jb20vd3d3L2NvbW1vbi9pbWcvd2gyMzBiZy5wbmc=/dx/0/dy/25/text/SUTvvJoxMjAyMTAzMTMwOTQ4NTQxMTc1MjE=/fill/I0ZGRkZGRg==/fontsize/320/dx/30/dy/30']
+    bannerList:['https://img.pic88.com/st_preview/400954332.jpg?imageMogr2/quality/100!/thumbnail/640|watermark/3/image/aHR0cHM6Ly9qcy5waWM4OC5jb20vd3d3L2NvbW1vbi9pbWcvcGljODgtd2F0ZXIucG5n/gravity/Center/dissolve/100/dx/0/dy/10/image/aHR0cHM6Ly9qcy5waWM4OC5jb20vd3d3L2NvbW1vbi9pbWcvd2gyMzBiZy5wbmc=/dx/0/dy/25/text/SUTvvJoxMjAyMTAzMTAxMTM3MzIxMjAwNTY=/fill/I0ZGRkZGRg==/fontsize/320/dx/30/dy/30','https://img.pic88.com/st_preview/400102742.jpg?imageMogr2/quality/100!/thumbnail/640|watermark/3/image/aHR0cHM6Ly9qcy5waWM4OC5jb20vd3d3L2NvbW1vbi9pbWcvcGljODgtd2F0ZXIucG5n/gravity/Center/dissolve/100/dx/0/dy/10/image/aHR0cHM6Ly9qcy5waWM4OC5jb20vd3d3L2NvbW1vbi9pbWcvd2gyMzBiZy5wbmc=/dx/0/dy/25/text/SUTvvJoxMjAyMTAzMTMwNzI3NTYxMDIxNjU=/fill/I0ZGRkZGRg==/fontsize/320/dx/30/dy/30','https://img.pic88.com/st_preview/400184421.jpg?imageMogr2/quality/100!/thumbnail/640|watermark/3/image/aHR0cHM6Ly9qcy5waWM4OC5jb20vd3d3L2NvbW1vbi9pbWcvcGljODgtd2F0ZXIucG5n/gravity/Center/dissolve/100/dx/0/dy/10/image/aHR0cHM6Ly9qcy5waWM4OC5jb20vd3d3L2NvbW1vbi9pbWcvd2gyMzBiZy5wbmc=/dx/0/dy/25/text/SUTvvJoxMjAyMTAzMTMwOTQ4NTQxMTc1MjE=/fill/I0ZGRkZGRg==/fontsize/320/dx/30/dy/30'],
+    storeList:[]
   },
 
   /**
@@ -23,12 +26,34 @@ Page({
     setTimeout(function(){wx.hideLoading()},3000),
     
     wx.getLocation({
-      isHighAccuracy: true,
       success(res){
         console.log(res,"定位信息")
         that.setData({
           latitude:res.latitude,
           longitude:res.longitude,
+        });
+        let requestData = {
+          areaId: "",
+          configValue: "",
+          ids: "",
+          isCount: "",
+          lbsUnion: "",
+          location: that.data.latitude+","+that.data.longitude,
+          page: {
+            limit: 0,
+            pageIndex: 0,
+            pageSize: 1,
+            start: 0
+          },
+          radius: 0,
+          searchName: "",
+          sort: ""
+        };
+        selectStoreList(requestData, result => {
+          console.log(result,"门店列表返回结果")
+          that.setData({
+            storeList:result
+          })
         })
       }
     })

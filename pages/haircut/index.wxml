@@ -37,29 +37,30 @@
   </view>
   <!-- 门店列表 -->
   <view class="md-area">
-    <block wx:for="{{5}}" wx:key="index">
+    <block wx:for="{{storeList}}" wx:key="index" wx:for-item="item">
       <view class="md-item">
         <view class="md-lt">
+          <input hidden="true" name="storeId" value="{{item.storeId}}"></input>
           <view class="md-name">
-            <text>大东工作室</text>
+            <text>{{item.storeName}}</text>
             <image class="img" src="../../images/cut.png"></image>
           </view>
           <view class="md-func">
-            <text class="txt">洗剪吹</text>
+            <text class="txt">{{item.serverName}}</text>
             <image class="img" src="../../images/cut.png"></image>
           </view>
-          <view class="md-num">1人正在剪发</view>
+          <view class="md-num">{{item.queueNumber}}人正在剪发</view>
           <view class="md-disc">
             <text class="txt">奖</text>
-            <text class="desc">要请好友奖励10元</text>
+            <text class="desc">邀请好友奖励10元</text>
           </view>
           <view class="md-addr">
             <image class="img" src="../../images/icon-point.png"></image>
-            <text class="txt">深圳市坪山快点改接口的六合商业广场一期捷普11号（金六福珠宝胖）</text>
+            <text class="txt">{{item.storeAddress}}</text>
           </view>
         </view>
         <view class="md-rt">
-          <view class="md-dis">430.2km</view>
+          <view class="md-dis">{{item.distance}}km</view>
           <view class="md-tips">离你最近</view>
           <view class="md-btn" bindtap="goStore">去剪发</view>
         </view>
